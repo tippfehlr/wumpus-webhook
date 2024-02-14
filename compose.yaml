@@ -1,0 +1,8 @@
+version: "3"
+services:
+  wumpus-webhook:
+    image: ghcr.io/tippfehlr/wumpus-webhook
+    restart: unless-stopped
+    environment:
+      - DISCORD_WEBHOOK=your-discord-webhook-url
+      - WUMPUS_TOKEN=authentification-password-from-wumpus.store
