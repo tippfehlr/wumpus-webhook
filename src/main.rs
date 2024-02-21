@@ -1,4 +1,4 @@
-use actix_web::{post, web, HttpResponse, Responder};
+use actix_web::{get, post, web, HttpResponse, Responder};
 use chrono::{Duration, Utc};
 use serde::Deserialize;
 use shuttle_actix_web::ShuttleActixWeb;
@@ -15,6 +15,11 @@ struct WumpusWebhook {
 #[derive(Deserialize)]
 struct Query {
     webhook: String,
+}
+
+#[get("/")]
+async fn index() -> impl Responder {
+    HttpResponse::Ok().body("Put\n\nhttps://wumpus-webhook.shuttleapp.rs/?webhook=<your-discord-webhook>\n\ninto the shuttle `webhook` field.\nThe password doesn't matter, input anything for the form to be happy.\n\n\nSource code: https://github.com/tippfehlr/wumpus-webhook")
 }
 
 #[post("/")]
@@ -73,7 +78,7 @@ async fn handle_webhook(
 #[shuttle_runtime::main]
 async fn main() -> ShuttleActixWeb<impl FnOnce(&mut web::ServiceConfig) + Send + Clone + 'static> {
     let config = move |cfg: &mut web::ServiceConfig| {
-        cfg.service(handle_webhook);
+        cfg.service(handle_webhook).service(index);
     };
 
     Ok(config.into())
