@@ -6,5 +6,5 @@ Translate wumpus.store webhooks into discord channel webhooks
 ## Usage
 
 ```
-https://wumpus-webhook.shuttleapp.rs/?webhook=<discord-webhook-url>
+https://wumpus-webhook.tippfehlr.dev/?webhook=<discord-webhook-url>
 ```

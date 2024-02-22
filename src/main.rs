@@ -21,7 +21,7 @@ async fn index() -> impl Responder {
     HttpResponse::Ok().body(
         "Put
 
-https://wumpus-webhook.shuttleapp.rs/?webhook=<your-discord-webhook>
+https://wumpus-webhook.tippfehlr.dev/?webhook=<your-discord-webhook>
  
 into the shuttle `webhook` field.
 The password doesn't matter, input anything for the form to be happy.
