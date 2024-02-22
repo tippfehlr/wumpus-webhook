@@ -1,0 +1,12 @@
+version: "3"
+services:
+  wumpus-webhook:
+    image: ghcr.io/tippfehlr/wumpus-webhook
+    restart: unless-stopped
+    ports:
+      - 4056:4056
+    environment:
+      - DISCORD_WEBHOOK=your-discord-webhook-url
+      - WUMPUS_TOKEN=authentification-password-from-wumpus.store
+    build:
+      dockerfile: ./Dockerfile
