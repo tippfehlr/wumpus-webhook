@@ -47,7 +47,7 @@ async fn handle_webhook(
                         {
                         "id": 10674342,
                         "title": "🔥 New vote! 🔥",
-                        "description": "<@{{userId}}> just voted for <@{{botId}}>!\nYou can vote again <t:{{timeStamp}}:R>!\nVote [here](https://wumpus.store/bot/813130993640013874)!",
+                        "description": "<@{{userId}}> just voted for <@{{botId}}>!\nYou can vote again <t:{{timeStamp}}:R>.\nVote [here](https://wumpus.store/bot/813130993640013874)!",
                         "color": 2326507,
                         "fields": []
                         }
