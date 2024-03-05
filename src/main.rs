@@ -23,7 +23,7 @@ async fn index() -> impl Responder {
 
 https://wumpus-webhook.tippfehlr.dev/?webhook=<your-discord-webhook>
  
-into the shuttle `webhook` field.
+into wumpus' `webhook` field.
 The password doesn't matter, input anything for the form to be happy.
 
 
